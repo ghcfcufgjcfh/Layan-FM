@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,8 +109,8 @@ button.menu:active {
     padding: 20px;
     border-radius: 15px;
     background: #151515;
-    text-align: left;
-    line-height: 1.8;
+    text-align: right;
+    line-height: 1.9;
     color: #ddd;
 }
 
@@ -121,8 +121,11 @@ button.menu:active {
 }
 
 .final {
+    text-align: right;
+}
+
+.final h2 {
     text-align: center;
-    white-space: pre-line;
 }
 </style>
 </head>
@@ -141,9 +144,10 @@ button.menu:active {
     <div class="song">Lifetime</div>
     <div class="artist">Justin Bieber</div>
 
-    <button class="play" onclick="toggleMusic()">▶️</button>
+    <button class="play" onclick="openSong()">▶️</button>
 
     <div class="buttons">
+
         <button class="menu" onclick="showSection('messages')">
             MESSAGES
         </button>
@@ -155,10 +159,12 @@ button.menu:active {
         <button class="menu" onclick="showSection('final')">
             FINAL TRACK
         </button>
+
     </div>
 
     <div id="messages" class="section">
         <h2>MESSAGE</h2>
+
         <p>
         حسيت اني صار شد اخر مره بيينا كان الموضوع تافهه كله عشان فولو وانا معودك اصلا اني مازعل على اشياء كثير بس لعلي فرغت فيك من باب ضغط ويمكن قلت كلام ماله داعي زعلك فا والله العظيم اني اسف ومايهون عندي زعلك لاني صدق احس بمسؤوليه اذا زعلتك فا صدق ليان والله اني ابيك بكل حالاتك وب اضافات ولا بدون ابي احافظ عليك لانك أندر شي قد صارلي بحياتي واحبك جدا
         </p>
@@ -166,6 +172,7 @@ button.menu:active {
 
     <div id="memories" class="section">
         <h2>MEMORIES</h2>
+
         <p>
         كل شيء بيننا له مكان خاص عندي.
         </p>
@@ -173,13 +180,9 @@ button.menu:active {
 
     <div id="final" class="section final">
         <h2>FINAL TRACK</h2>
+
         <p>
-        ليان
-
-        مهما صار بيننا من نقاشات بسيطة،
-        أهم شيء عندي إنك تعرفين إن مكانك عندي ما يتغير.
-
-        وهذا الراديو كله لك.
+        وبالنهايه ذا المشروع سويته والله لاجل ارضى اغلى عين عندي بالدنيا ومهما سويت ماوفيك حقك بكل شيي واولها مسامحتك لي بظروف كثيره وانا اسف بكل مره عيشتك بشي مو حلو واعرفي اني اذا زعلتك والله ماكون راضي عن نفسي حتى و الله لايحرمني من وجودك وترا والله مانساك بصلاتي وادعيلك حتى ب امورك الجامعيه
         </p>
     </div>
 
@@ -195,8 +198,11 @@ function showSection(id) {
     document.getElementById(id).style.display = 'block';
 }
 
-function toggleMusic() {
-    alert("بنضيف الأغنية نفسها هنا في الخطوة الجاية 🎵");
+function openSong() {
+    window.open(
+        "https://www.youtube.com/results?search_query=Justin+Bieber+Lifetime+Official+Audio",
+        "_blank"
+    );
 }
 
 </script>
